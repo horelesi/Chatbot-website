@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Helper Chatbot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #1f70c1;
+      color: white;
+      padding: 1rem;
+      font-size: 1.5rem;
+    }
+    main {
+      padding: 2rem;
+    }
+    footer {
+      background: #eee;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    🎓 Campus Helper Chatbot
+  </header>
+
+  <main>
+    <p>Hi there! Click the chat icon in the lower right corner to start talking with the bot.</p>
+    <p>The bot can answer FAQs, recommend study spots, or set reminders for you!</p>
+  </main>
+
+  <footer>
+    Built with IBM Watson Assistant & Flask Webhook | © 2025 Your Name
+  </footer>
+
+  <!-- IBM Watson Assistant Web Chat script -->
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "YOUR-INTEGRATION-ID", // Replace with your Integration ID
+      region: "us-south", // or your Watson region (e.g., eu-gb)
+      serviceInstanceID: "YOUR-SERVICE-INSTANCE-ID", // Replace with your instance ID
+      onLoad: function(instance) { instance.render(); }
+    };
+    setTimeout(function(){
+      const t = document.createElement('script');
+      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</body>
+</html>
