@@ -54,22 +54,19 @@
   </footer>
 
   <!-- IBM Watson Assistant Chat Integration -->
-  <script>
-    window.watsonAssistantChatOptions = {
-      integrationID: "968183e2-b493-4213-a891-7b1096f6fc3b", // The ID of this integration
-      region: "us-east", // The region your integration is hosted in
-      serviceInstanceID: "6b561148-1cf8-4ab5-bc0a-ce8de60a6465", // The ID of your service instance
-      onLoad: async (instance) => { await instance.render(); }
-    };
-
-    setTimeout(function(){
-      const t = document.createElement('script');
-      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + 
-              (window.watsonAssistantChatOptions.clientVersion || 'latest') + 
-              "/WatsonAssistantChatEntry.js";
-      document.head.appendChild(t);
-    });
-  </script>
+ <script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "968138e2-b493-4213-a891-7b1096f6fc3b", // The ID of this integration.
+    region: "us-east", // The region your integration is hosted in.
+    serviceInstanceID: "6b561148-1cf8-4ab5-bc0a-ec8de60ca465", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
 </body>
 </html>
 
